@@ -1,0 +1,15 @@
+@mixin pseudoContent ($position, $left, $right, $bottom, $top, $z-index, $content) {
+  position: $position;
+  left: $left;
+  right: $right;
+  bottom: $bottom;
+  top: $top;
+  z-index: $z-index;
+  content: $content;
+}
+
+@mixin Shadow($property){
+  -webkit-box-shadow: $property;
+  -moz-box-shadow: $property;
+  box-shadow: $property;
+}

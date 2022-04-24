@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cards Pokemon by mdesigner.co</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body  >
+  <div class="container">
+
+  
+    <div class="card" id="app">
+      <div class="card_container">
+        <div class="card_header">
+          <div class="card_header-name">
+          <div class="col">
+            <h1 class="pokeName"></h1>
+          </div>
+          <div class="col">
+            <span class="pokeHealth">
+              <span class="pokeHealth-tag">HP<b class="pokeHealth-tagNumber"></b></span>
+              <span class="pokeHealth-element">
+                <img  src="" alt="">
+              </span>
+            </span>
+          </div>
+        </div>
+        <div class="card_header-img">
+          <div class="card_header-img_content">
+            <img class="pokeImage" src="" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="card_content">
+        <ul class="card_content-stats">
+          <li><span class="label">Ataque: </span><span class="pokestats"></span></li>
+          <li><span class="label">Defensa: </span><span class="pokestats"></span></li>
+          <li><span class="label">Atq Especial: </span><span class="pokestats"></span></li>
+          <li><span class="label">Def Especial: </span><span class="pokestats"></span></li>
+          <li><span class="label">Velocidad: </span><span class="pokestats"></span></li>
+          <li><span class="label">Altura: </span><span class="pokestats"></span></li>
+          <li><span class="label">Peso: </span><span class="pokestats"></span></li>
+        </ul>
+      </div>
+    </div>
+    </div>
+    <button class="saveCard gradient-border">Download</button>
+  </div>
+  <style class="hover"></style>
+  <script src="/assets/js/api.js"></script>
+  <script src="/assets/js/domtoImage.js"></script>
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,192 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 24em;
+  max-width: 100%;
+  height: 32em;
+  padding: 1em;
+  z-index: 1;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.35) ;
+  border-radius: 1em;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4.7px);
+  -webkit-backdrop-filter: blur(4.7px);
+  border: 1px solid rgba(255, 255, 255, 0.43);
+  overflow: hidden;
+  border-radius: 1em;
+  &::before {
+    @include pseudoContent (absolute, 0, 0, 0, 0, 2, "");
+    opacity: .75;
+    filter: brightness(.3) contrast(0.35);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 300% 300%;
+    background-image: linear-gradient(
+      115deg,
+      transparent 0%,
+      $color1 25%,
+      transparent 47%,
+      transparent 53%,
+      $color2 75%,
+      transparent 100%
+    );
+    mix-blend-mode: color-dodge;
+    border-radius: 1em;
+    transition: all .33s ease;
+  }
+  &::after {
+    @include pseudoContent (absolute, 0, 0, 0, 0, 3, "");
+    width: 100%;
+    height: 100%;
+    border-radius: 1em;
+    opacity: .75;
+    background-repeat: no-repeat;
+    background-image: url("https://assets.codepen.io/13471/sparkles.gif"),
+      url(https://assets.codepen.io/13471/holo.png),
+      linear-gradient(125deg, #ff008450 15%, #fca40040 30%, #ffff0030 40%, #00ff8a20 60%, #00cfff40 70%, #cc4cfa50 85%);
+    background-position: 50% 50%;
+    background-size: 160%;
+    background-blend-mode: color-dodge;
+    mix-blend-mode: color-dodge;
+    filter: brightness(1) contrast(1);
+    transition: all .33s ease;
+  }
+  &:hover {
+    box-shadow:
+    -20px -20px 30px -25px $color1,
+    20px 20px 30px -25px $color2,
+    -7px -7px 10px -5px $color1,
+    7px 7px 10px -5px $color2,
+    0 0 13px 4px rgba(255,255,255,0.3),
+    0 55px 35px -20px rgba(0, 0, 0, 0.5);
+    &::after{
+      filter: brightness(1) contrast(1);;
+      opacity: 0.65;
+    }
+  }
+  &_container {
+    padding: 1em;
+    height: 100%;
+    box-sizing: border-box;
+    border-radius: 0.5em;
+    background-color: #f9f9f9;
+    background-image: url('/assets/images/background_card.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-box-shadow: inset 0px 0px 9px 2px rgba(0,0,0,0.20);
+    box-shadow: inset 0px 0px 9px 2px rgba(0,0,0,0.20);
+  }
+  &_header {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    &-name {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 1em;
+      .col {
+        flex-basis: auto;
+        display: flex;
+        align-items: center;
+        padding: 0.3em 1em;
+        background-color: #f1f1f1;
+        &:nth-child(1) {
+          border-bottom-right-radius: 2em;
+          border-right: 1px solid #f9f9f9;
+          border-left: 1px solid #e2e2e2;
+          border-top: 1px solid #e2e2e2;
+        }
+        &:nth-child(2) {
+          justify-content: flex-end;
+          border-top-left-radius: 2em;
+          border-left: 1px solid #fff;
+          border-right: 1px solid #e2e2e2;
+          border-bottom: 1px solid #e2e2e2;
+        }
+      }
+    }
+    &-img {
+      padding: 0.5em;
+      width: 100%;
+      max-width: 80%;
+      margin: 0 auto;
+      margin-bottom: 1em;
+      color: rgba(0, 0, 0, 0.72);
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow:
+        2px 2px 0.5em rgba(122, 122, 122, 0.16),
+        inset 1px 1px 0 rgba(255, 255, 255, 0.16),
+        inset -1px -1px 0 rgba(0, 0, 0, 0.16)
+      ;
+      border: 1px solid #cacade;
+      background:
+        -moz-linear-gradient(-72deg,#dedeff,#ffffff 16%,#dedeff 21%,#ffffff 24%,#555564 27%,#dedeff 36%,#ffffff 45%,#ffffff 60%,#dedeff 72%,#ffffff 80%,#dedeff 84%,#555564
+      );
+      background:
+      -webkit-linear-gradient(
+        -72deg,#dedeff,#ffffff 16%,#dedeff 21%,#ffffff 24%,#555564 27%,#dedeff 36%,#ffffff 45%,#ffffff 60%,#dedeff 72%,#ffffff 80%,#dedeff 84%,#555564
+      );
+      background:
+      -o-linear-gradient(
+        -72deg,#dedeff,#ffffff 16%,#dedeff 21%,#ffffff 24%,#555564 27%,#dedeff 36%,#ffffff 45%,#ffffff 60%,#dedeff 72%,#ffffff 80%,#dedeff 84%,#555564
+      );
+      background:
+      linear-gradient(-72deg, #dedeff,#ffffff 16%,#dedeff 21%,#ffffff 24%,#555564 27%,#dedeff 36%,#ffffff 45%,#ffffff 60%,#dedeff 72%,#ffffff 80%,#dedeff 84%,#555564
+      );
+      &_content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: auto;
+        max-height: 10em;
+        padding: 1em;
+        box-sizing: border-box;
+        overflow: hidden;
+        background-color: #020709;
+        -webkit-box-shadow: inset 0px 0px 5px 2px rgba(0,0,0,0.09);
+        box-shadow: inset 0px 0px 5px 2px rgba(0,0,0,0.09);
+      }
+      img {
+        max-width: 100%;
+        height: 100%;
+        max-height: 9em;
+        object-fit: contain;
+        flex: 1;
+        object-position: center center;
+        overflow: hidden;
+      }
+    }
+  }
+  &_content {
+    display: flex;
+    justify-content: center;
+    padding: .5em;
+    background:
+        -moz-linear-gradient(-72deg,#dedeff,#ffffff 16%,#dedeff 21%,#ffffff 24%,#555564 27%,#dedeff 36%,#ffffff 45%,#ffffff 60%,#dedeff 72%,#ffffff 80%,#dedeff 84%,#555564
+      );
+    background:
+    -webkit-linear-gradient(
+      -72deg,#dedeff,#ffffff 16%,#dedeff 21%,#ffffff 24%,#555564 27%,#dedeff 36%,#ffffff 45%,#ffffff 60%,#dedeff 72%,#ffffff 80%,#dedeff 84%,#555564
+    );
+    background:
+    -o-linear-gradient(
+      -72deg,#dedeff,#ffffff 16%,#dedeff 21%,#ffffff 24%,#555564 27%,#dedeff 36%,#ffffff 45%,#ffffff 60%,#dedeff 72%,#ffffff 80%,#dedeff 84%,#555564
+    );
+    background:
+    linear-gradient(-72deg, #dedeff,#ffffff 16%,#dedeff 21%,#ffffff 24%,#555564 27%,#dedeff 36%,#ffffff 45%,#ffffff 60%,#dedeff 72%,#ffffff 80%,#dedeff 84%,#555564
+    );
+    box-shadow: inset 0px 0px 5px 2px rgba(0,0,0,0.09);
+    &-stats {
+      list-style: none;
+      columns: 2;
+      -webkit-columns: 2;
+      -moz-columns: 2;
+      li {
+        margin-bottom: 0.5em;
+      }
+    }
+  }
+}

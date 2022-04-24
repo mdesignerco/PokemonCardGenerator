@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Roboto:wght@400;700&display=swap');
+
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: $mainMdesigner;
+  box-sizing: border-box;
+}
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  .card{
+    margin-bottom: 1em;
+  }
+}
+
+.animated {
+  transition: 0.3s ease-in;
+  animation: holoCard 12s ease 0s 1;
+  &:before {
+    transition: 0.3s ease-in;
+    animation: holoGradient 12s ease 0s 1;
+  }
+  &:after {
+    transition: 0.3s ease-in;
+    animation: holoSparkle 12s ease 0s 1;
+  }
+}
+

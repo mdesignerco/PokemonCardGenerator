@@ -1,0 +1,40 @@
+
+.poke{
+  &Name {
+    margin: 0;
+    font-size: 1.5em;
+    padding-right: 0.5em;
+    text-transform: capitalize;
+  }
+  &Health {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    &-tag {
+      font-size: 0.8em;
+      font-weight: bold;
+      &Number{
+        font-size: 1.2em;
+        padding-left: 0.3em;
+      }
+    }
+    &-element {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      margin-left: 1em;
+      border-radius: 50px;
+      background: linear-gradient(145deg, #f0f0f0, #cacaca);
+      box-shadow:  5px 5px 13px #c5c5c5, -5px -5px 13px #fbfbfb;
+      img {
+        width: 100%;
+        max-width: 24px;
+        height: auto;
+      }
+    }
+  }
+  &stats{
+    font-weight: bold;
+  }
+}
